@@ -1,35 +1,80 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { useEffect, useState } from 'react';
+import {
+  listarPedidos,
+  cadastrarPedido,
+  entregarPedido,
+  removerEntregues,
+} from './services/api';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [pedidos, setPedidos] = useState<string[]>([]);
+  const [descricao, setDescricao] = useState('');
+
+  const carregarPedidos = async () => {
+    const lista = await listarPedidos();
+    setPedidos(lista);
+  };
+
+  useEffect(() => {
+    carregarPedidos();
+  }, []);
+
+  const handleCadastrar = async () => {
+    if (descricao.trim()) {
+      await cadastrarPedido(descricao);
+      setDescricao('');
+      carregarPedidos();
+    }
+  };
+
+  const handleEntregar = async (numero: number) => {
+    await entregarPedido(numero);
+    carregarPedidos();
+  };
+
+  const handleRemoverEntregues = async () => {
+    await removerEntregues();
+    carregarPedidos();
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="container">
+      <div className='boxContant'>
+        <h1 className="title">TechTudo Delivery</h1>
+        <div className="boxForm">
+          <input
+            value={descricao}
+            onChange={(e) => setDescricao(e.target.value)}
+            className="inputDescricao"
+            placeholder="Descrição do pedido"
+          />
+          <button onClick={handleCadastrar} className="btnCad">
+            Cadastrar
+          </button>
+        </div>
+        <ul className="listPedidos">
+          {pedidos.map((pedido, index) => (
+            <li
+              key={index}
+              className="itenPedido"
+            >
+              <span>{pedido}</span>
+              <button
+                onClick={() => handleEntregar(index + 1)}
+                className="btnEntregar"
+              >
+                Entregar
+              </button>
+            </li>
+          ))}
+        </ul>
+        <button onClick={handleRemoverEntregues} className="removerEntregues">
+          Remover Entregues
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
