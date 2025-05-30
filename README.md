@@ -56,7 +56,6 @@ TechTudoDelivery/
 |   |   ├── services/
 |   |   |   └── api.tsx
 │   │   ├── App.tsx
-│   │   ├── api.ts
 │   │   └── main.tsx
 │   ├── index.html
 │   ├── vite.config.ts
@@ -110,18 +109,10 @@ npm run dev
 
 | Método | Endpoint                  | Descrição                         |
 |--------|---------------------------|-----------------------------------|
-| GET    | `/pedidos`                | Lista todos os pedidos           |
-| POST   | `/pedidos`                | Cadastra um novo pedido          |
-| PATCH  | `/pedidos/:id/entregar`   | Marca pedido como entregue       |
-| DELETE | `/pedidos/entregues`      | Remove pedidos entregues         |
-
-## 👨‍💻 Autor
-
-**Seu Nome**  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([https://linkedin.com/in/seu-perfil](https://www.linkedin.com/in/felipe-maia-386019281/)) 
-[![Portfolio](https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)]([https://seusite.com](https://fm-developer.netlify.app/))
-
-✉️ Contato: [jofelipefm@gmail.com](mailto:jofelipefm@gmail.com)
+| GET    | `/pedidos`                | Lista todos os pedidos            |
+| POST   | `/pedidos`                | Cadastra um novo pedido           |
+| PATCH  | `/pedidos/:id/entregar`   | Marca pedido como entregue        |
+| DELETE | `/pedidos/entregues`      | Remove pedidos entregues          |
 
 ## 📄 Licença
 
