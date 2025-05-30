@@ -8,7 +8,7 @@
 Sistema de gerenciamento de pedidos com frontend em **React + TypeScript** e backend em **Node.js + Express + TypeScript**, organizado em arquitetura MVC. Ideal para praticar conceitos de desenvolvimento fullstack.
 
 ## Pré-visualização
-Confira uma prévia do Conecta:
+Confira uma prévia:
 
 ![Imagem da Aplicação](frontend/images/img-project.png)
 
