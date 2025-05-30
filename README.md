@@ -134,10 +134,10 @@ npm run dev
 ## 👨‍💻 Autor
 
 **Seu Nome**  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/seu-perfil) 
-[![Portfolio](https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://seusite.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([https://linkedin.com/in/seu-perfil](https://www.linkedin.com/in/felipe-maia-386019281/)) 
+[![Portfolio](https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)]([https://seusite.com](https://fm-developer.netlify.app/))
 
-✉️ Contato: [seuemail@email.com](mailto:seuemail@email.com)
+✉️ Contato: [seuemail@email.com](mailto:jofelipefm@gmail.com)
 
 ## 📄 Licença
 
@@ -147,6 +147,6 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) par
 
 ```bash
 # Clonar repositório
-git clone https://github.com/seu-usuario/techtudo-delivery.git
+git clone https://github.com/fel1pee3/TechTudoDelivery-fullstack.git
 cd techtudo-delivery
 ```
