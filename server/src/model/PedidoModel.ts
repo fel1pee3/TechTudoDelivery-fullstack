@@ -1,12 +1,9 @@
 export class PedidoModel {
-
-    public descricao: string;
-    public entregue: boolean;
-
-    constructor(descricao: string, entregue: boolean = false) {
-        this.descricao = descricao;
-        this.entregue = entregue;
-    }
+    
+    constructor(
+        public descricao: string,
+        public entregue: boolean = false
+    ) {}
 
     marcarComoEntregue() {
         this.entregue = true;

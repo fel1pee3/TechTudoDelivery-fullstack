@@ -1,31 +1,21 @@
-import { PedidoModel } from "../model/PedidoModel";
+import { PedidoService } from "../service/PedidoService";
 
 export class PedidoController {
-
-    private pedidos: PedidoModel[] = [];
+    constructor(private service: PedidoService) {}
 
     cadastrarPedido(descricao: string): void {
-        const novo = new PedidoModel(descricao);
-        this.pedidos.push(novo);
+        this.service.cadastrarPedido(descricao);
     }
 
     listarPedidos(): string[] {
-        return this.pedidos.map((pedido, index) => {
-            const status = pedido.estarEntregue() ? "Entregue" : "Pendente";
-            return `${index + 1}. ${pedido.descricao} - ${status}`;
-        });
+        return this.service.listarPedidos();
     }
 
     marcarComoEntregue(numero: number): boolean {
-        if (numero > 0 && numero <= this.pedidos.length) {
-            this.pedidos[numero - 1].marcarComoEntregue();
-            return true;
-        }
-        return false;
+        return this.service.marcarComoEntregue(numero);
     }
 
     removerEntregues(): void {
-        this.pedidos = this.pedidos.filter(p => !p.estarEntregue());
+        this.service.removerEntregues();
     }
-
 }
