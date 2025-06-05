@@ -7,7 +7,10 @@
 
 Sistema de gerenciamento de pedidos com frontend em **React + TypeScript** e backend em **Node.js + Express + TypeScript**, organizado em arquitetura MVC. Ideal para praticar conceitos de desenvolvimento fullstack.
 
-![TechTudo Delivery Demo](https://via.placeholder.com/800x400?text=Screenshot+do+Sistema+TechTudo+Delivery)
+## Pré-visualização
+Confira uma prévia:
+
+![Imagem da Aplicação](frontend/images/img-project.png)
 
 ## 📦 Funcionalidades
 
@@ -43,14 +46,16 @@ TechTudoDelivery/
 │   │   └── PedidoController.ts
 │   ├── model/
 │   │   └── PedidoModel.ts
-│   ├── routes/
-│   │   └── pedido.routes.ts
+│   ├── view/
+│   │   └── PedidoView.ts
+|   ├── index.ts
 │   ├── server.ts
 │   └── tsconfig.json
 ├── frontend/
 │   ├── src/
+|   |   ├── services/
+|   |   |   └── api.tsx
 │   │   ├── App.tsx
-│   │   ├── api.ts
 │   │   └── main.tsx
 │   ├── index.html
 │   ├── vite.config.ts
@@ -104,40 +109,10 @@ npm run dev
 
 | Método | Endpoint                  | Descrição                         |
 |--------|---------------------------|-----------------------------------|
-| GET    | `/pedidos`                | Lista todos os pedidos           |
-| POST   | `/pedidos`                | Cadastra um novo pedido          |
-| PATCH  | `/pedidos/:id/entregar`   | Marca pedido como entregue       |
-| DELETE | `/pedidos/entregues`      | Remove pedidos entregues         |
-
-## 🧠 Melhorias Futuras
-
-🧪 **Testes Automatizados**  
-- Implementar testes com Jest/Vitest
-- Adicionar testes E2E com Cypress
-
-💾 **Persistência de Dados**  
-- Integrar com MongoDB ou PostgreSQL
-- Implementar migrações de banco de dados
-
-🔒 **Segurança**  
-- Adicionar autenticação JWT
-- Implementar middleware de validação
-
-📱 **Responsividade**  
-- Design responsivo para mobile
-- Componentes adaptáveis
-
-🎨 **UI Avançada**  
-- Integrar TailwindCSS ou Styled Components
-- Animações e feedbacks visuais
-
-## 👨‍💻 Autor
-
-**Seu Nome**  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([https://linkedin.com/in/seu-perfil](https://www.linkedin.com/in/felipe-maia-386019281/)) 
-[![Portfolio](https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)]([https://seusite.com](https://fm-developer.netlify.app/))
-
-✉️ Contato: [seuemail@email.com](mailto:jofelipefm@gmail.com)
+| GET    | `/pedidos`                | Lista todos os pedidos            |
+| POST   | `/pedidos`                | Cadastra um novo pedido           |
+| PATCH  | `/pedidos/:id/entregar`   | Marca pedido como entregue        |
+| DELETE | `/pedidos/entregues`      | Remove pedidos entregues          |
 
 ## 📄 Licença
 
