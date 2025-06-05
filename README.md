@@ -46,9 +46,10 @@ TechTudoDelivery/
 │   │   └── PedidoController.ts
 │   ├── model/
 │   │   └── PedidoModel.ts
-│   ├── view/
-│   │   └── PedidoView.ts
-|   ├── index.ts
+│   ├── Routes/
+│   │   └── PedidoRoutes.ts
+│   ├── service/
+│   │   └── PedidoService.ts
 │   ├── server.ts
 │   └── tsconfig.json
 ├── frontend/
